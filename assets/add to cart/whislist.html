@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Page</title>
+    <style>
+      .product {
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .add-to-cart,
+      .add-to-whislist {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      .my-cart {
+        display: flex;
+        align-filteritems: center;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .my-cart .image {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+      .my-cart .increment,
+      .my-cart .decrement {
+        cursor: pointer;
+        padding: 5px 10px;
+        background-color: #4caf50;
+        color: white;
+      }
+      .hidden {
+        display: none;
+      }
+      .not-found {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sort-buttons">
+      <button onclick="sortItemSorts('ProductItem', 'asc')">(Asc)</button>
+      <button onclick="sortItemSorts('ProductItem', 'desc')">(Desc)</button>
+      
+    </div>
+
+    <input type="text" id="filterInput" placeholder="Enter a search term" />
+
+    <div class="ProductItems">
+      <div class="product filteritem">
+        <img
+          class="productImg"
+          src="https://qph.cf2.poecdn.net/main-thumb-pb-4064124-200-zzqqvdszcmfxrivdwslzwcpmcqhucnmx.jpeg"
+          alt=""
+        />
+
+        <h2 class="productTitle">Product 1 watch</h2>
+        <strong>Watch</strong>
+        <span>Lorem, ipsum dolor sit amet consectetur.</span>
+
+        <p class="productPrice">$3.78</p>
+
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-whislist">Add to Whislist</button>
+      </div>
+
+
+      <div class="product filteritem">
+        <img
+          class="productImg"
+          src="https://qph.cf2.poecdn.net/main-thumb-pb-6012-200-woirfuyuelhdyuqwaykvmasfbsizypef.jpeg"
+          alt=""
+        />
+
+        <h2 class="productTitle">Product 1 blazer</h2>
+        <strong>Blazer</strong>
+        <span>Lorem, ipsum dolor sit amet consectetur.</span>
+
+        <p class="productPrice">$35.78</p>
+
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-whislist">Add to Whislist</button>
+      </div>
+
+      <!-- <div class="product filteritem">
+        <img
+          class="productImg"
+          src="https://qph.cf2.poecdn.net/main-thumb-pb-6012-200-woirfuyuelhdyuqwaykvmasfbsizypef.jpeg"
+          alt=""
+        />
+        <h2 class="productTitle">Product Name</h2>
+        <p class="productPrice">$19.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-whislist">Add to Whislist</button>
+      </div>
+      <div class="product filteritem">
+        <img
+          class="productImg"
+          src="https://psc2.cf2.poecdn.net/assets/_next/static/media/assistant.b077c338.svg"
+          alt=""
+        />
+        <h2 class="productTitle">Product Name 2</h2>
+        <p class="productPrice">$22.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-whislist">Add to Whislist</button>
+      </div>
+      <div class="product filteritem">
+        <img
+          class="productImg"
+          src="https://qph.cf2.poecdn.net/main-thumb-pb-4064124-200-zzqqvdszcmfxrivdwslzwcpmcqhucnmx.jpeg"
+          alt=""
+        />
+        <h2 class="productTitle">Product Name 3</h2>
+        <p class="productPrice">$22.997979</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-whislist">Add to Whislist</button>
+      </div>
+      <div class="product filteritem">
+        <img
+          class="productImg"
+          src="https://qph.cf2.poecdn.net/main-thumb-pb-1017-200-oorzovnctrmxyclcflzillghrpzdgrgv.jpeg"
+          alt=""
+        />
+        <h2 class="productTitle">Product Name 4</h2>
+        <p class="productPrice">$22.997979666</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-whislist">Add to Whislist</button>
+      </div> -->
+    </div>
+
+    <h1>My whishlist</h1>
+    <div class="my-whislist-container"></div>
+    <b class="wishlistlength"></b>
+    <h1>My Cart</h1>
+    <div class="my-cart-container"></div>
+    <b class="cartlength"></b>
+    <p>Total: <span class="total-price">$0.00</span></p>
+    <button class="clear-cart">Clear Cart</button>
+
+    <div id="not-found-message" class="not-found hidden">
+      Search keyword not found
+    </div>
+
+    <script src="./filter.js"></script>
+    <script src="./sorting.js"></script>
+    <script src="./whislist.js"></script>
+
+    <!-- <script src="./shopping.js"></script> -->
+  </body>
+</html>

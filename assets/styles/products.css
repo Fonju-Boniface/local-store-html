@@ -1,0 +1,108 @@
+
+.AllProducts{
+  position: relative;
+}
+.ProductsHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  position: sticky;
+  top: 100px;
+  padding: .5rem;
+  z-index: 999;
+  background: var(--color-gray-100);
+}
+.ProductsHeader .sort-buttons {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* background: red; */
+}
+.ProductsHeader #filterInput {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  outline: 0.01rem solid var(--color-magenta);
+  width: 70%;
+  background: none;
+  color: var(--color-dark-blue);
+}
+.ProductsHeader .sort-buttons button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background: var(--color-magenta);
+  color: var(--color-white);
+  border-radius: 0.3rem;
+}
+.ProductsHeader .sort-buttons button i{
+  display: none;
+}
+.ProductsHeader .sort-buttons button:hover {
+    opacity: 0.7;
+}
+
+.ProductItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    row-gap: 3rem;
+    width: 100%;
+}
+.ProductItems .filteritem {
+  /* background: pink; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start;
+  text-align: left;
+  width: 300px;
+  height: 350px;
+  /* border-radius: 0.3rem; */
+}
+.ProductItems .filteritem .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start;
+  text-align: left;
+
+}
+@media screen and (max-width: 660px) {
+  .ProductItems .filteritem{
+    width: 100%;
+    margin-bottom: 5rem;
+    height: fit-content;
+  }
+  .ProductItems .filteritem img{
+    margin-bottom: 1rem;
+  }
+
+}
+@media screen and (max-width: 550px) {
+  .ProductsHeader .sort-buttons{
+    width: fit-content;
+  }
+  .ProductsHeader .sort-buttons button b{
+    display: none;
+  }
+  .ProductsHeader .sort-buttons button i{
+    display: flex;
+  }
+}
+.hidden, span.Hiden {
+    display: none;
+  }
+  .not-found {
+    color: red;
+    font-weight: bold;
+  }
